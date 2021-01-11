@@ -9,4 +9,14 @@ public class Food {
     double quantity;
     boolean inStock;
     LocalDateTime expiryDate;
+
+    public Food(String ceafa) { 
+        this.name = name;
+        
+        
+    }
+
+    public Food() {
+        
+    }
 }

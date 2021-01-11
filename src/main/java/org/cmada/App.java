@@ -6,7 +6,10 @@ public class App
 
         Race race = new Race();
 
-        RadioControlledCar dacia = new RadioControlledCar();
+        Engine daciaEngine = new Engine();
+        daciaEngine.manufacturer = "Renault";
+
+        RadioControlledCar dacia = new RadioControlledCar(daciaEngine);
 
         dacia.name = "Dacia";
         dacia.color = "red";
@@ -14,12 +17,13 @@ public class App
         dacia.wheelCount = 4;
         dacia.mileage = 8.5;
 
-        Engine daciaEngine = new Engine();
-        daciaEngine.manufacturer = "Renault";
 
         dacia.engine = daciaEngine;
 
-        RadioControlledCar lada = new RadioControlledCar();
+        Engine ladaEngine = new Engine();
+        ladaEngine.manufacturer ="Lada";
+
+        RadioControlledCar lada = new RadioControlledCar(ladaEngine);
 
         lada.name = "Lada";
         lada.color = "blue";
@@ -27,14 +31,15 @@ public class App
         lada.wheelCount = 4;
         lada.mileage = 8;
 
-        Engine ladaEngine = new Engine();
-        ladaEngine.manufacturer ="Lada";
-
         lada.engine = ladaEngine;
 
         race.firstCar = dacia;
         race.secondCar = lada;
 
         dacia.name = "Dacia Logan";
+
+
+        dacia.accelerate(10.1);
+
     }
 }

@@ -1,7 +1,8 @@
 package org.cmada;
 
 public class EntertainmentActivity {
-    
-    String name;
-    
+
+    public EntertainmentActivity(String eating) {
+        this.eating = eating;
+    }
 }

@@ -7,4 +7,10 @@ public class Vehicle {
     Engine engine;
     int wheelCount;
 
+    public double accelerate(double speed) {
+        System.out.println(speed);
+        return 10.5;
+    }
 }
+
+
