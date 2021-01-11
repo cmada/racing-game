@@ -1,8 +1,7 @@
 package org.cmada;
 
-class Rescuer {
+class Rescuer extends Mamifer {
     
-    String name;
     double money;
     
 }

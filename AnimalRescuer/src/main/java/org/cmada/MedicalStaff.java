@@ -1,8 +1,7 @@
 package org.cmada;
 
-public class MedicalStaff {
+public class MedicalStaff extends Mamifer{
     
-    String name;
     String specialization;
     
 }
