@@ -2,6 +2,7 @@ package org.cmada;
 
 public class Vehicle {
 
+    public static String controlType = "Radio Control";
     private String name;
     private String color;
     private double mileage;

@@ -1,6 +1,6 @@
 package org.cmada;
 
-public class EntertainmentActivity {
+public abstract class EntertainmentActivity {
 
     private final String eating;
 
@@ -8,7 +8,6 @@ public class EntertainmentActivity {
         this.eating = eating;
     }
 
-    public String getName() {
-        return null;
-    }
+    public abstract String getName();
+
 }
