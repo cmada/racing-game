@@ -1,8 +1,7 @@
 package org.cmada;
 
-public class App 
-{
-    public static void main( String[] args ){
+public class App {
+    public static void main(String[] args) {
 
         Race race = new Race();
 
@@ -17,7 +16,7 @@ public class App
         dacia.setMileage(8.5);
 
         Engine ladaEngine = new Engine();
-        ladaEngine.manufacturer ="Lada";
+        ladaEngine.manufacturer = "Lada";
 
         RadioControlledCar lada = new RadioControlledCar(ladaEngine);
 
@@ -33,25 +32,7 @@ public class App
 
         dacia.setName("Dacia Logan");
 
-        System.out.println(dacia.getName());
-        System.out.println(lada.getName());
-
-        System.out.println(RadioControlledCar.controlType);
-        System.out.println(dacia.controlType);
-        System.out.println(lada.controlType);
-
-        dacia.setName("Dacia Sandero");
-
-        dacia.controlType = "Improved Radio Control";
-
-        System.out.println("Changed values below.");
-
-        System.out.println(dacia.getName());
-        System.out.println(lada.getName());
-
-        System.out.println("Value when called from class: " + RadioControlledCar.controlType);
-        System.out.println("Value when called from dacia object: " + dacia.controlType);
-        System.out.println("Value when called from lada object: " + lada.controlType);
+        new AutoVehicle(new Engine(), "name autovehicle");
 
     }
 }
