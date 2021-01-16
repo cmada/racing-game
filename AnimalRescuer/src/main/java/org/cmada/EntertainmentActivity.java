@@ -8,4 +8,7 @@ public class EntertainmentActivity {
         this.eating = eating;
     }
 
+    public String getName() {
+        return null;
+    }
 }
