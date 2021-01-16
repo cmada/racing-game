@@ -2,9 +2,9 @@ package org.cmada;
 
 public class Game {
 
-    public Rescuer rescuer;
-    Animal animal;
-    MedicalStaff medic;
+   private Rescuer rescuer;
+   private Animal animal;
+   private MedicalStaff medic;
 
     public org.cmada.Rescuer getRescuer() {
         return rescuer;
@@ -12,5 +12,21 @@ public class Game {
 
     public void setRescuer(org.cmada.Rescuer rescuer) {
         this.rescuer = rescuer;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+
+    public MedicalStaff getMedic() {
+        return medic;
+    }
+
+    public void setMedic(MedicalStaff medic) {
+        this.medic = medic;
     }
 }
