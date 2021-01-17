@@ -55,6 +55,16 @@ public class Vehicle {
         this.wheelCount = wheelCount;
     }
 
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", mileage=" + mileage +
+                ", engine=" + engine +
+                ", wheelCount=" + wheelCount +
+                '}';
+    }
 }
 
 

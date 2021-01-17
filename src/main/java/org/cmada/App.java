@@ -34,5 +34,8 @@ public class App {
 
         new AutoVehicle(new Engine(), "name autovehicle");
 
+
+        System.out.println(dacia.toString());
     }
+
 }
