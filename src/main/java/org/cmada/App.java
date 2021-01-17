@@ -1,12 +1,11 @@
 package org.cmada;
 
-public class App {
+public class App<car> {
     public static void main(String[] args) {
 
-        Race race = new Race();
 
         Engine daciaEngine = new Engine();
-        daciaEngine.manufacturer = "Renault";
+        daciaEngine.setManufacturer("Renault");
 
         RadioControlledCar dacia = new RadioControlledCar(daciaEngine);
         dacia.setName("Dacia");
@@ -16,7 +15,7 @@ public class App {
         dacia.setMileage(8.5);
 
         Engine ladaEngine = new Engine();
-        ladaEngine.manufacturer = "Lada";
+        ladaEngine.setManufacturer("Lada");
 
         RadioControlledCar lada = new RadioControlledCar(ladaEngine);
 
@@ -27,8 +26,9 @@ public class App {
         lada.setWheelCount(4);
         lada.setMileage(8);
 
-        race.firstCar = dacia;
-        race.secondCar = lada;
+        RadioControlledMotorcycle motorcycle = new RadioControlledMotorcycle(new Engine());
+
+        Race race = new Race(dacia, motorcycle);
 
         dacia.setName("Dacia Logan");
 
@@ -36,6 +36,13 @@ public class App {
 
 
         System.out.println(dacia.toString());
+
+
+
+
+
     }
+
+
 
 }

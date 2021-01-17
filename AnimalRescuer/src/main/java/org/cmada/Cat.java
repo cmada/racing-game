@@ -2,7 +2,7 @@ package org.cmada;
 
 import com.sun.media.sound.SoftMidiAudioFileReader;
 
-public class Cat extends Mamifer {
+public class Cat extends Animal {
 
     private int legsCount;
     private String name;

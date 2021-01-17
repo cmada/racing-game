@@ -1,6 +1,6 @@
 package org.cmada;
 
-public class Dog extends Mamifer {
+public class Dog extends Animal {
 
     private double barkPower;
     private String name;

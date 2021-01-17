@@ -1,16 +1,13 @@
 package org.cmada;
 
-public class Vehicle {
+public abstract class Vehicle {
 
     public static final String CONTROL_TYPE = "Radio Control";
     private String name;
     private String color;
-    private double mileage;
-    private Engine engine;
     private int wheelCount;
 
-
-    public double accelerate(double speed) {
+    protected double accelerate (double speed) {
         System.out.println(speed);
         return 10.5;
     }
@@ -19,9 +16,7 @@ public class Vehicle {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name.trim();
-    }
+    public void setName(String name) { this.name = name.trim(); }
 
     public String getColor() {
         return color;
@@ -31,21 +26,6 @@ public class Vehicle {
         this.color = color;
     }
 
-    public double getMileage() {
-        return mileage;
-    }
-
-    public void setMileage(double mileage) {
-        this.mileage = mileage;
-    }
-
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
 
     public int getWheelCount() {
         return wheelCount;
@@ -55,16 +35,24 @@ public class Vehicle {
         this.wheelCount = wheelCount;
     }
 
+
     @Override
     public String toString() {
         return "Vehicle{" +
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
-                ", mileage=" + mileage +
-                ", engine=" + engine +
                 ", wheelCount=" + wheelCount +
                 '}';
     }
+
+    public abstract Engine getEngine();
+
+    public abstract void setEngine(Engine engine);
+
+    public abstract double getMileage();
+
+    public abstract void setMileage(double mileage);
 }
+
 
 

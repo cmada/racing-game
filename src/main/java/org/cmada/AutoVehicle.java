@@ -20,7 +20,6 @@ public class AutoVehicle extends Vehicle {
         this(new Engine());
      }
 
-
     @Override
     public Engine getEngine() { return engine; }
 
