@@ -4,6 +4,15 @@ public class AutoVehicle extends Vehicle {
 
     private Engine engine;
     private double mileage;
+    private double fuelLevel;
+
+    public double getFuelLevel() {
+        return fuelLevel;
+    }
+
+    public void setFuelLevel(double fuelLevel) {
+        this.fuelLevel = fuelLevel;
+    }
 
     public AutoVehicle(Engine engine) {
         this.engine = engine;
@@ -33,4 +42,16 @@ public class AutoVehicle extends Vehicle {
 
     @Override
     public void setMileage(double mileage) { this.mileage = mileage; }
+
+    @Override
+    protected double accelerate(double speed) {
+        setCurrentSpeed(getCurrentSpeed() + speed);
+
+        double traveledDisstance = getCurrentSpeed()/ 60;
+
+        double spentFuel = traveledDisstance * mileage / 100;
+
+        fuelLevel -= spentFuel;
+        return traveledDisstance
+    }
 }

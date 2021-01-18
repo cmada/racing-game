@@ -6,10 +6,20 @@ public abstract class Vehicle {
     private String name;
     private String color;
     private int wheelCount;
+    private double currentSpeed;
+
+    public double getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public void setCurrentSpeed(double currentSpeed) {
+        this.currentSpeed = currentSpeed;
+    }
 
     protected double accelerate (double speed) {
-        System.out.println(speed);
-        return 10.5;
+       currentSpeed += speed;
+
+        return currentSpeed / 60;
     }
 
     public String getName() {
