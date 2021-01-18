@@ -1,20 +1,13 @@
 package org.cmada;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Race {
 
-    private Vehicle firstCompetitor;
-    private Vehicle secondCompetitor;
+    private List<Vehicle> competitors = new ArrayList<Vehicle>();
 
-    public Race(Vehicle firstCar, Vehicle secondCar) {
-        this.firstCompetitor = firstCar;
-        this.secondCompetitor = secondCar;
-    }
-
-    public Vehicle getFirstCompetitor() {
-        return firstCompetitor;
-    }
-
-    public Vehicle getSecondCompetitor() {
-        return secondCompetitor;
+    public List<Vehicle> getCompetitors() {
+        return competitors;
     }
 }

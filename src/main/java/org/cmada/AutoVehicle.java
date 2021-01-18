@@ -47,11 +47,11 @@ public class AutoVehicle extends Vehicle {
     protected double accelerate(double speed) {
         setCurrentSpeed(getCurrentSpeed() + speed);
 
-        double traveledDisstance = getCurrentSpeed()/ 60;
+        double traveledDistance = getCurrentSpeed()/ 60;
 
-        double spentFuel = traveledDisstance * mileage / 100;
+        double spentFuel = traveledDistance * mileage / 100;
 
         fuelLevel -= spentFuel;
-        return traveledDisstance
+        return traveledDistance;
     }
 }

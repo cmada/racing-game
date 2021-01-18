@@ -19,7 +19,6 @@ public class App<car> {
 
         RadioControlledCar lada = new RadioControlledCar(ladaEngine);
 
-
         lada.setName("lada");
         lada.setColor("blue");
         lada.setDoorCount(2);
@@ -27,22 +26,30 @@ public class App<car> {
         lada.setMileage(8);
 
         RadioControlledMotorcycle motorcycle = new RadioControlledMotorcycle(new Engine());
-
-        Race race = new Race(dacia, motorcycle);
+        motorcycle.accelerate(10);
 
         dacia.setName("Dacia Logan");
 
         new AutoVehicle(new Engine(), "name autovehicle");
 
-
         System.out.println(dacia.toString());
 
+        Race race = new Race();
+
+        race.getCompetitors().add(dacia);
+        race.getCompetitors().add(lada);
+
+        for (Vehicle vehicle : race.getCompetitors()) {
+
+            if (vehicle !=null){
+                System.out.println(vehicle.getName());
+            }
 
 
+        }
 
 
     }
-
-
-
 }
+
+
