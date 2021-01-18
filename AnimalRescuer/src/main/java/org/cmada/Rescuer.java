@@ -18,12 +18,30 @@ class Rescuer extends Mamifer {
         double hungerLevel = animal.getHungerLevel();
         hungerLevel--;
         animal.setHungerLevel(hungerLevel);
+
+        System.out.println(animal.getName() + "'s hunger level is now: " + animal.getHungerLevel());
+
+        if (food.getName().equals(animal.getFavoriteFoodName())){
+            animal.setHealthLevel(animal.getHealthLevel() + 1);
+            System.out.println(animal.getName() + "s happiness level is now " + animal.getHealthLevel());
+        }
+
     }
     public void entertain(Animal animal, EntertainmentActivity activity) {
         System.out.println(this.name + " just did/played some " + activity.getName() + animal.getName());
 
-        animal.setHealthLevel(animal.getHealthLevel() + 1);
+        int increment;
 
-        System.out.println(animal.getName() + "'s happiness level is now: " + animal.getHealthLevel());
+        if (activity.getName().equals(animal.getFavoriteActivityName())){
+
+            increment = 2;
+        } else {
+
+            increment =1;
+        }
+
+        animal.setHealthLevel(animal.getHealthLevel()+ increment);
+
+        System.out.println(animal.getName() + "'s health level is now: " + animal.getHealthLevel());
     }
 }
